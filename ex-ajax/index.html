@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <header>
+            <div class="container container-header">
+    
+                <a href="#">
+        
+                    <img src="../img/logo.png" alt="logo">
+                </a>
+            </div>
+        </header>
+    
+        <main>
+            <div>
+    
+                <div class="container container-main-card">
+                        
+                        <div v-for="(element, i) in dataB" class="container-card">
+    
+                            <div class="card">
+    
+                                <img :src="element.poster" alt="poster">
+    
+                                <span class="title block">
+                                    {{element.title}}
+                                </span>
+    
+                                <span class="author block">
+                                    {{element.author}}
+                                </span>
+    
+                                <span class="year block">
+                                    {{element.year}}
+                                </span>
+    
+                                <span class="genre block">
+                                    {{element.genre}}
+                                </span>
+    
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
